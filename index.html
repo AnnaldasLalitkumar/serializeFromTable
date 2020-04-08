@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Serialize From Table</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+.container{
+margin-top:2%;
+margin-bottom:2%;
+padding:5%;
+}
+
+.text-center{
+text-align:center;
+}
+
+div{
+background-color:white;
+}
+.container-shadow{
+	box-shadow:1px 1px 2px 3px #eeeeee;
+}
+.div-shadow{
+	box-shadow:1px 2px 3px #eeeeee;
+}	
+</style>
+</head>
+<body style="background-color:#D733FF">
+<div class="container container-shadow">
+<center>
+	<h2>HTML Table without Form Elements:</h2>
+<table class="table table-bordered table-sm" id="myTable1">
+<thead>
+	<tr>
+		<th>
+			Sr No
+		</th>
+		<th>
+			Name
+		</th>
+		<th>
+			Gender
+		</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>
+			1
+		</td>
+		<td>
+			Lalitkumar Naresh Annaldas
+		</td>
+		<td>
+			Male
+		</td>
+	</tr>
+	<tr>
+		<td>
+			2
+		</td>
+		<td>
+			Hemantkumar Naresh Annaldas
+		</td>
+		<td>
+			Male
+		</td>
+	</tr>
+	<tr>
+		<td>
+			3
+		</td>
+		<td>
+			Naresh Krishna Annaldas
+		</td>
+		<td>
+			Male
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			4
+		</td>
+		<td>
+			Laxmi Naresh Annaldas
+		</td>
+		<td>
+			Female
+		</td>	
+	</tr>
+</tbody>
+</table>
+<input type="button" class="btn btn-primary" id="btnConvertTable1" value="Serialize"/>
+</center>
+
+<label><b><u>Result:</u></b></label>
+<div id="result1" class="div-shadow"></div>
+<hr/>
+<center>
+<h2>HTML Table with Form Elements:</h2>
+<table class="table table-hover table-bordered table-sm text-center" id="myTable2" >
+<thead>
+	<tr>
+		<th>
+			Sr No
+		</th>
+		<th>
+			Name
+		</th>
+		<th>
+			Gender
+		</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>
+			1
+		</td>
+		<td>
+		
+			<input type="text" class="form-control" value=""/>
+	
+		</td>
+		<td>
+		
+			<select class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			2
+		</td>
+		<td>
+			<input type="text" class="form-control" value=""/>
+		</td>
+		<td>
+			<select class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			3
+		</td>
+		<td>
+			<input type="text" class="form-control" value=""/>
+		</td>
+		<td>
+			<select class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			4
+		</td>
+		<td>
+			<input type="text" class="form-control" value=""/>
+		</td>
+		<td>
+			<select class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		</td>	
+	</tr>
+</tbody>
+</table>
+<input type="button" class="btn btn-success" id="btnConvertTable2" value="Serialize"/>
+</center>
+<label><b><u>Result:</b></u></label>
+<div id="result2" class="div-shadow"></div>
+<hr/>
+<footer class="text-center">
+For any queries or requirements feel free to connect to me at:
+<br/>
+lalitkumar.annaldas@gmail.com<br/>
+You can even connect me at <b><a href="http://www.linkedin.com/in/lalitkumar-annaldas-48a284148">LinkedIn</a></b>
+</footer>
+</div>
+
+<script src="js/serializeFromTable-min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btnConvertTable1").click(function(){
+    let result = $("#myTable1").serializeFromTable();
+	$("#result1").empty();
+	$("#result1").text(result);
+  });
+  
+    $("#btnConvertTable2").click(function(){
+    let result = $("#myTable2").serializeFromTable();
+	$("#result2").empty();
+	$("#result2").text(result);
+  });
+});
+</script>
+</body>
+</html>
