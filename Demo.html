@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Serialize From Table</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<style>
+.navbar-brand{
+	font-size:1.6rem
+}
+.container{
+margin-top:2%;
+margin-bottom:2%;
+padding:5%;
+}
+
+body{
+		font-family: Sentinel SSm A,Sentinel SSm B,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+		font-size:1.2rem;
+		font-weight:400;
+		line-height: 1.5;
+}
+
+.text-center{
+text-align:center;
+}
+
+div{
+background-color:white;
+}
+.container-shadow{
+	box-shadow:1px 1px 2px 3px #eeeeee;
+}
+.div-shadow{
+	box-shadow:1px 2px 3px #eeeeee;
+}
+.hpanel{
+		padding:8px 20px;
+		background-color: #f1f1f1;
+	}	
+	.btn-center{
+		margin-left:45%;
+		top:-50%;
+	}
+</style>
+<script data-ad-client="ca-pub-1532916399483239" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body style="background-color:#D733FF">
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="index.html">SERIALIZEFROMTABLE</a>
+	  
+		<!-- Links -->
+		<ul class="navbar-nav ">
+			<li class="nav-item active">
+				<a class="nav-link" href="Demo.html">Demo</a>
+			</li>
+		  <li class="nav-item">
+			<a class="nav-link" target="_blank" href="https://github.com/AnnaldasLalitkumar/serializeFromTable">Download</a>
+		  </li>		  
+		</ul>
+	  </nav>
+<div class="wrapper container-shadow col-md-12">
+	<div class="row"></div>
+<div class="col-md-8" >
+	<div class="row">
+	<h2>HTML Table without Form Elements:</h2>
+<table class="table table-bordered table-sm" id="myTable1">
+<thead>
+	<tr>
+		<th>
+			Sr No
+		</th>
+		<th>
+			Name
+		</th>
+		<th>
+			Gender
+		</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>
+			1
+		</td>
+		<td>
+			Lalitkumar Naresh Annaldas
+		</td>
+		<td>
+			Male
+		</td>
+	</tr>
+	<tr>
+		<td>
+			2
+		</td>
+		<td>
+			Hemantkumar Naresh Annaldas
+		</td>
+		<td>
+			Male
+		</td>
+	</tr>
+	<tr>
+		<td>
+			3
+		</td>
+		<td>
+			Naresh Krishna Annaldas
+		</td>
+		<td>
+			Male
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			4
+		</td>
+		<td>
+			Laxmi Naresh Annaldas
+		</td>
+		<td>
+			Female
+		</td>	
+	</tr>
+</tbody>
+</table>
+<input type="button" class="btn btn-primary btn-center" id="btnConvertTable1" value="Serialize"/>
+
+</div>
+<label><b><u>Result:</u></b></label>
+<div id="result1" class="div-shadow hpanel"></div>
+<hr/>
+<div class="row">
+<h2>HTML Table with Form Elements:</h2>
+<table class="table table-hover table-bordered table-sm text-center" id="myTable2" >
+<thead>
+	<tr>
+		<th>
+			Sr No
+		</th>
+		<th>
+			Name
+		</th>
+		<th>
+			Gender
+		</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>
+			1
+		</td>
+		<td>
+		
+			<input type="text" class="form-control" value=""/>
+	
+		</td>
+		<td>
+		
+			<select class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		
+		</td>
+	</tr>
+	<tr>
+		<td>
+			2
+		</td>
+		<td>
+			<input type="text" class="form-control" value=""/>
+		</td>
+		<td>
+			<select class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			3
+		</td>
+		<td>
+			<input type="text" class="form-control" value=""/>
+		</td>
+		<td>
+			<select class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			4
+		</td>
+		<td>
+			<input type="text" class="form-control" value=""/>
+		</td>
+		<td>
+			<select class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		</td>	
+	</tr>
+</tbody>
+</table>
+<input type="button" class="btn btn-success btn-center" id="btnConvertTable2" value="Serialize"/>
+</div>
+<label><b><u>Result:</b></u></label>
+<div id="result2" class="div-shadow hpanel"></div>
+</div>
+<div class="row" style="margin-top:10px;"></div>
+
+</div>
+<footer class="jumbotron text-center">
+	For any queries or requirements feel free to connect to me at:
+	<br/>
+	lalitkumar.annaldas@gmail.com<br/>
+	You can even connect me at: <b><a target="_blank" href="http://www.linkedin.com/in/lalitkumar-annaldas-48a284148">LinkedIn</a></b>
+	<p class="copyright">
+		SerializeFromTable &copy; <a target="_blank" href="https://github.com/AnnaldasLalitkumar">Lalitkumar Naresh Annaldas</a> 2020.
+		Released under the <a target="_blank" href="https://github.com/AnnaldasLalitkumar/serializeFromTable/blob/master/LICENSE">MIT license</a>.
+	</p>
+</footer>
+
+<script src="js/serializeFromTable-min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btnConvertTable1").click(function(){
+    let result = $("#myTable1").serializeFromTable();
+	$("#result1").empty();
+	$("#result1").text(result);
+  });
+  
+    $("#btnConvertTable2").click(function(){
+    let result = $("#myTable2").serializeFromTable();
+	$("#result2").empty();
+	$("#result2").text(result);
+  });
+});
+</script>
+</body>
+</html>
