@@ -47,9 +47,16 @@ background-color:white;
 	.btn-center{
 		margin-left:45%;
 		top:-50%;
+		margin-top:5px;
 	}
 	li.active{
 		border-bottom:5px solid #D733FF;
+	}
+	p{
+		margin-left:25px;
+	}
+	table{
+		margin:5px;
 	}
 </style>
 <script data-ad-client="ca-pub-1532916399483239" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -73,12 +80,15 @@ background-color:white;
 		  </li>		  
 		</ul>
 	  </nav>
-<div class="wrapper container-shadow col-md-12">
-	<div class="row"></div>
-<div class="col-md-8" >
-	<div class="row">
+<div class="wrapper container-shadow" style="margin-left:10px;margin-right:10px;">
+	
+<div class="col-md-8" style="margin-top:5px;">
+	Lets have a look at serializing Normal HTML Table with content editable  
+	<div class="hpanel">
 	<h2>HTML Table without Form Elements:</h2>
-<table class="table table-bordered table-sm" id="myTable1">
+	
+<div class="row">
+<table class="table table-bordered table-sm" id="myTable1" contenteditable="true">
 <thead>
 	<tr>
 		<th>
@@ -139,24 +149,31 @@ background-color:white;
 	</tr>
 </tbody>
 </table>
+</div>
 <input type="button" class="btn btn-primary btn-center" id="btnConvertTable1" value="Serialize"/>
 
 </div>
 <label><b><u>Result:</u></b></label>
 <div id="result1" class="div-shadow hpanel"></div>
 <hr/>
-<div class="row">
+
+	Well we have now seen the demo of converting normal HTML table to JSON.<br/>
+	<h3>How about converting Table having Form elements????</h3>
+Lets have a look at the Result for below table.<br/>
+<div class="hpanel">
+
 <h2>HTML Table with Form Elements:</h2>
+<div class="row">
 <table class="table table-hover table-bordered table-sm text-center" id="myTable2" >
 <thead>
 	<tr>
-		<th>
+		<th data-columnTitle="sr_no">
 			Sr No
 		</th>
-		<th>
+		<th data-columnTitle="name">
 			Name
 		</th>
-		<th>
+		<th data-columnTitle="gender">
 			Gender
 		</th>
 	</tr>
@@ -224,13 +241,26 @@ background-color:white;
 	</tr>
 </tbody>
 </table>
+</div>
 <input type="button" class="btn btn-success btn-center" id="btnConvertTable2" value="Serialize"/>
 </div>
 <label><b><u>Result:</b></u></label>
 <div id="result2" class="div-shadow hpanel"></div>
-</div>
-<div class="row" style="margin-top:10px;"></div>
 
+
+<p>
+	<h3>Cool !!!</h3>
+</p>
+<div class="row" style="margin-top:20px;">
+<br/>
+<p>
+Hope this plugin helps you out in your projects. <br/>Feel free to connect to me for any bugs by dropping mail to below mail id.
+<br/>I will make sure to fix it up asap.<br/>
+Any suggestions or feedback are always welcome.
+<br/>
+THANK YOU GUYS !!! HAPPY CODING !!!!
+</p>
+</div>
 </div>
 <footer class="jumbotron text-center">
 	For any queries or requirements feel free to connect to me at:
@@ -242,6 +272,8 @@ background-color:white;
 		Released under the <a target="_blank" href="https://github.com/AnnaldasLalitkumar/serializeFromTable/blob/master/LICENSE">MIT license</a>.
 	</p>
 </footer>
+</div>
+
 
 <script src="js/serializeFromTable-min.js"></script>
 <script>
@@ -253,7 +285,9 @@ $(document).ready(function(){
   });
   
     $("#btnConvertTable2").click(function(){
-    let result = $("#myTable2").serializeFromTable();
+    let result = $("#myTable2").serializeFromTable({
+		columnNameBy:"data-columnTitle"
+	});
 	$("#result2").empty();
 	$("#result2").text(result);
   });
