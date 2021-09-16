@@ -30,10 +30,7 @@ $(function(e) {
                 return r.val()
             }
             if ("select" == a.toLowerCase()) {
-
-                n.getValueByDesc = true;
                 if (n.getValueByDesc ) {
-
                     if (r.val().length > 1) {
                         var text = e.trim(e(r).text());
                         var i = text.split("  ");
@@ -44,7 +41,6 @@ $(function(e) {
                 }
                 return r.val();
             }
-
             return "textarea" == a.toLowerCase() ? r.val() : t.text()
         }
         e.each(e(i).find("tr>th"), (function(t, r) { "default" == n.columnNameBy.toLowerCase() ? u.push(e.trim(e(r).text())) : null != e(r).attr(n.columnNameBy) ? u.push(e.trim(e(r).attr(n.columnNameBy))) : u.push(e.trim(e(r).text())) })), e.each(e(o).find("tr"), (function(t, r) {
