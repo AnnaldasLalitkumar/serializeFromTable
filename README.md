@@ -1,96 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Serialize From Table</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="HTML,CSS,TABLE to JSON,JavaScript,JQuery,serializeFromTable, convert table to json">
-  <meta name="description" content="Simplest way to convert HTML table with Form elements or without Form Elements to JSON using jquery.">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script data-ad-client="ca-pub-1532916399483239" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <style>
-	  .navbar-brand{
-	font-size:1.6rem
-}
-	ul.square-bullets>li{		
-		list-style: square;
-	}
-	
-	body{
-		font-family: Sentinel SSm A,Sentinel SSm B,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-		font-size:1.2rem;
-		font-weight:400;
-		line-height: 1.5;
-	}
-
-	.container{
-	margin-top:2px;
-	margin-bottom:2px;
-	padding:5%;
-	}
-	
-	.text-center{
-	text-align:center;
-	}
-	
-	div{
-	background-color:white;
-	text-align: justify;
-  	text-justify: inter-word;
-	}
-	code{
-	text-align: justify;
-  	text-justify: inter-word;
-	}
-	.container-shadow{
-		box-shadow:1px 1px 2px 3px #eeeeee;
-	}
-	.div-shadow{
-		box-shadow:1px 2px 3px #eeeeee;
-	}	
-	.hpanel{
-		padding:8px 20px;
-		background-color: #f1f1f1;
-	}
-	p{
-		margin-left:25px;
-	}
-	li.active{
-		border-bottom:5px solid #D733FF;
-	}
-	</style>
-</head>
-<body style="background-color:#D733FF">
-	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-		<!-- Brand -->
-		<a class="navbar-brand" href="#">SERIALIZEFROMTABLE</a>
-	  
-		<!-- Links -->
-		<ul class="navbar-nav">
-			<li class="nav-item active">
-				<a class="nav-link"><i class="fa fa-book"></i> Manual</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="Demo.html"><i class="fa fa-desktop"></i> Demo</a>
-			</li>	
-		  <li class="nav-item">
-			<a class="nav-link" target="_blank" href="https://github.com/AnnaldasLalitkumar/serializeFromTable"><i class="fa fa-download"></i> Download</a>
-		  </li>		  
-		</ul>
-	  </nav>
-  
-<div class="wrapper container-shadow" style="margin-left:10px;margin-right:10px;">
-<div class="col-lg-8" style="margin-top:5px;margin-bottom:10px;">
-	<div class="row"></div>
 <div class="" style="margin-top:20px;">
 <h3>1. Introduction:</h3>
 <hr/>
 <div class="row">
-	<p>Positive User experience is the key for any project to be successful and developers work extremely hard 
+	Positive User experience is the key for any project to be successful and developers work extremely hard 
 		to achieve this.
 	HTML tables are created to provide a straightforward way to present or display data in a format or structure that can be easy for users to understand and digest.
 	Displaying static data into a table is quite easy for developers. Now lets imagine we have a task to create 
@@ -100,10 +12,8 @@
 	When Exchanging data between a browser and a server, the data can only be text.	
 	Since the JSON format is text only, it can easily be sent to and from a server, 
 	and used as a data format by any programming language.
-	
-
 	SerializeFromTable is a light weight JQuery plugin used to serialize any table to JSON.
-	</p>
+	
 </div>
 </div>
 <div class=" hpanel">
