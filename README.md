@@ -28,6 +28,7 @@
 		<li>Compatible with other plugins like select2js, Datatables, Datepicker etc.</li>
 		<li>Allows custom name instead of displayed table column names</li>
 		<li>Allows getting value by option value or description from dropdowns.</li>
+		<li>Supports multiple select dropdown to fetch multiple selected values.</li>
 	</ul>
 	</div>
 </div>
